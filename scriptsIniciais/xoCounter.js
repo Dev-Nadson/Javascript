@@ -13,15 +13,7 @@ function XO(str) {
         return (str + " => False")
     }
 }
+const prompt = require("prompt-sync")();
 
-const readline = require("readline");
-
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-
-rl.question(function (str) {
-    console.log(XO(str))
-    rl.close();
-});
+const str = prompt("");
+console.log(XO(str));
