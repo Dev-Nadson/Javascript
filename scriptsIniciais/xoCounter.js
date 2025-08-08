@@ -8,12 +8,19 @@ function XO(str) {
         if (char === "o") county++
     }
     if (countx == county) {
-        return (str + " => True")
+        return true
     } else {
-        return (str + " => False")
+        return false
     }
 }
-const prompt = require("prompt-sync")();
+const readline = require("readline");
 
-const str = prompt("");
-console.log(XO(str));
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question("", (name) => {
+    console.log(XO(name))
+    rl.close()
+});
