@@ -8,12 +8,11 @@ function XO(str) {
         if (char === "o") county++
     }
     if (countx == county) {
-        return (str + " => True")
+        return true
     } else {
-        return (str + " => False")
+        return false
     }
 }
-
 const readline = require("readline");
 
 const rl = readline.createInterface({
@@ -21,7 +20,7 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-rl.question(function (str) {
-    console.log(XO(str))
-    rl.close();
+rl.question("", (name) => {
+    console.log(XO(name))
+    rl.close()
 });
