@@ -1,4 +1,4 @@
-function logs(mensage, status) {
+function logs(mensage: string, status: string) {
 
     const value = ["info", "warning", "error"]
     if (value.includes(status)) {
