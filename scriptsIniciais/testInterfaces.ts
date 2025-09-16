@@ -4,7 +4,13 @@ interface Iproduct {
     price?: number;
 }
 
-const products = (product: Iproduct) => {
+const createProduct = (product: Iproduct) => {
+    console.log(product)
+}
+const updateProduct = (product: Pick<Iproduct, "name">) => {
+    product = {
+        name: "Pera"
+    }
     console.log(product)
 }
 
@@ -14,4 +20,5 @@ product = {
     name: "Banana"
 }
 
-products(product)
+createProduct(product)
+updateProduct(product)
